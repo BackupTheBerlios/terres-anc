@@ -2,7 +2,7 @@
 /*
 Engine of ``Terres-Anciennes", a web-based multiplayer RPG.
 Copyright 2004, 2005 Nicolas Hess / Choplair-network / Nova Devs.
-#$Id: persos.php,v 1.3 2005/02/09 20:38:04 pachilor Exp $
+#$Id: persos.php,v 1.4 2005/02/13 00:57:24 pachilor Exp $
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License
@@ -27,13 +27,13 @@ define('terres_anciennes',true);
 include 'common-inc/config.inc.php';
 include 'common-inc/fonctions.php';
 
-$link = @mysql_connect($dbhost,$dbname,$dbpass);
-@mysql_select_db($dbbase,$link);
-
 /* VERIFICATION ET ACCEPTATION SI PSEUDO ET PASSWORD CORRECT */
 
 if( isset($HTTP_POST_VARS["log"]))
 {
+	$link = @mysql_connect($db_host,$db_name,$db_pass);
+	@mysql_select_db($db_base,$link);
+
 	$post_ident = trim($HTTP_POST_VARS["log"]);
         $post_perso = trim($HTTP_POST_VARS["login"]);
         $post_passw = $HTTP_POST_VARS["pwd"];
