@@ -4,8 +4,8 @@ session_start();
 /* CONNECTION A LA BASE DE DONNEE */
 
 define('terres_anciennes',true);
-include '../include/config.inc.php';
-include '../include/fonctions.php';
+include 'common-inc/config.inc.php';
+include 'common-inc/fonctions.php';
 
 $link = @mysql_connect($dbhost,$dbname,$dbpass);
 @mysql_select_db($dbbase,$link);

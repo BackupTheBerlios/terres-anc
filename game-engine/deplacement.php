@@ -42,7 +42,7 @@ if( $_SESSION['infos']['mouvement_reste'] <= 0)
 /* CONNECTION A LA BASE DE DONNEE */
 
 define('terres_anciennes',true);
-include '../include/config.inc.php';
+include 'common-inc/config.inc.php';
 
 $link = @mysql_connect($dbhost,$dbname,$dbpass);
 @mysql_select_db($dbbase,$link);

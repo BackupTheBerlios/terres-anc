@@ -24,7 +24,7 @@ document.location.href='../../index.php'
 /* CONNECTION A LA BASE DE DONNEE */
 
 define('terres_anciennes',true);
-include '../../include/config.inc.php';
+include '../common-inc/config.inc.php';
 
 $link = @mysql_pconnect($dbhost,$dbname,$dbpass);
 @mysql_select_db($dbbase,$link);
